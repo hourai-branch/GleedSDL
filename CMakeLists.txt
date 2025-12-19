@@ -26,6 +26,8 @@ FetchContent_Declare(
 )
 #FetchContent_MakeAvailable(SDL3)
 
+find_package(SDL3)
+
 
 set(ENABLE_WEBM_PARSER ON CACHE BOOL "" FORCE)
 FetchContent_Declare(
@@ -64,7 +66,7 @@ FetchContent_Declare(
     GIT_REPOSITORY "https://github.com/xiph/opus"
     GIT_TAG "v1.5.2"
 )
-#FetchContent_MakeAvailable(libopus)
+FetchContent_MakeAvailable(libopus)
 
 
 #include(libvpx.cmake)
